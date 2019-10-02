@@ -13,6 +13,8 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "Logging Example";
 
+    Button trueButton, falseButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,36 +22,22 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        Button bt = (Button)findViewById(R.id.btn);
-        Log.d(TAG,"On True" );
-        try {
-            //
-        } catch (Exception e) {
-            Log.e(TAG, "Received an exception " + e.getMessage() );
-        }
+        trueButton = (Button) findViewById(R.id.trueButton);
+        falseButton = (Button)findViewById(R.id.falseButton);
 
-        bt.setOnClickListener(new View.OnClickListener(){
+        trueButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Toast.makeText(MainActivity.this,"Correct",Toast.LENGTH_LONG).show();
-
+                Toast.makeText(MainActivity.this,"Correct",Toast.LENGTH_SHORT).show();
+                Log.d(TAG,"On True" );
             }
         });
 
-
-
-        Button btn = (Button)findViewById(R.id.button5);
-        Log.d(TAG,"On False" );
-        try {
-            //
-        } catch (Exception e) {
-            Log.e(TAG, "Received an exception " + e.getMessage() );
-        }
-        btn.setOnClickListener(new View.OnClickListener(){
+        falseButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Toast.makeText(MainActivity.this,"Wrong",Toast.LENGTH_LONG).show();
-
+                Toast.makeText(MainActivity.this,"Wrong",Toast.LENGTH_SHORT).show();
+                Log.d(TAG,"On False" );
             }
         });
     }
