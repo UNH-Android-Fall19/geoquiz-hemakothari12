@@ -25,11 +25,13 @@ public class MainActivity extends AppCompatActivity {
         trueButton = (Button) findViewById(R.id.trueButton);
         falseButton = (Button)findViewById(R.id.falseButton);
 
+
+
         trueButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 Toast.makeText(MainActivity.this,"Correct",Toast.LENGTH_SHORT).show();
-                Log.d(TAG,"On True" );
+                Log.d(TAG,"Clicked True Button" );
             }
         });
 
@@ -37,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 Toast.makeText(MainActivity.this,"Wrong",Toast.LENGTH_SHORT).show();
-                Log.d(TAG,"On False" );
+                Log.d(TAG,"Clicked False Button" );
             }
         });
     }
